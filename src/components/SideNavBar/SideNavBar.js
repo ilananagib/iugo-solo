@@ -1,88 +1,46 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { Manager, Popper } from 'react-popper';
-import Button from '@material-ui/core/Button';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import Collapse from '@material-ui/core/Collapse';
-import Grow from '@material-ui/core/Grow';
-import Paper from '@material-ui/core/Paper';
-import Portal from '@material-ui/core/Portal';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
 import { withStyles } from '@material-ui/core/styles';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
+import InboxIcon from '@material-ui/icons/Inbox';
+import DraftsIcon from '@material-ui/icons/Drafts';
 
 const styles = theme => ({
-    root: {
-        display: 'flex',
-    },
-    paper: {
-        marginRight: theme.spacing.unit * 2,
-    },
-    popperClose: {
-        pointerEvents: 'none',
-    },
+  root: {
+    width: '100%',
+    maxWidth: 360,
+    backgroundColor: theme.palette.background.paper,
+  },
 });
 
-class SideNavBar extends React.Component {
-    state = {
-        open: false,
-    };
-
-    handleToggle = () => {
-        this.setState({ open: !this.state.open });
-    };
-
-    handleClose = event => {
-        if (this.target1.contains(event.target) || this.target2.contains(event.target)) {
-            return;
-        }
-
-        this.setState({ open: false });
-    };
-
-    render() {
-        const { classes } = this.props;
-        const { open } = this.state;
-
-        return (
-            <div className={classes.root}>
-                <Paper className={classes.paper}>
-                    <MenuList>
-                        <MenuItem>Home</MenuItem>
-                        <MenuItem>About</MenuItem>
-                        <MenuItem>Categories</MenuItem>
-                        <MenuItem>Contact Us</MenuItem>
-                    </MenuList>
-                </Paper>
-                <Manager>
-                    
-                        <div
-                            ref={node => {
-                                this.target1 = node;
-                            }}
-                        >
-                            <Button
-                                aria-owns={open ? 'menu-list-grow' : null}
-                                aria-haspopup="true"
-                                onClick={this.handleToggle}
-                            >
-                            </Button>
-                        </div>
-                   
-                </Manager>
-              </div >
-           
-        );
-    
-
-    SideNavBar.propTypes = {
-        classes: PropTypes.object.isRequired,
-    };
-
+function SideNavBar(props) {
+  const { classes } = props;
+  return (
+    <div className={classes.root}>
+      <List component="nav">
+        <ListItem button component="a" href="/">
+          <ListItemText primary="Home" />
+        </ListItem>
+        <ListItem button component="a" href="/about">
+          <ListItemText primary="About" />
+        </ListItem>
+        <ListItem button component="a" href="/categories">
+          <ListItemText primary="Categories" />
+        </ListItem>
+        <ListItem button component="a" href="/contactus">
+          <ListItemText primary="Contact Us" />
+        </ListItem>
+      </List>
+    </div>
+  );
 }
 
-}
+SideNavBar.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
 export default withStyles(styles)(SideNavBar);
