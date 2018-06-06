@@ -18,11 +18,18 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 router.post('/register', (req, res, next) => {
   console.log('req: ', req.body);
   
+  const name = req.body.name;
+  const address = req.body.address;
+  const city = req.body.city;
+  const zipcode = req.body.zipcode;
+  const phone = req.body.phone;
+  const email = req.body.email;
+  const website = req.body.website;
   const username = req.body.username;
   const password = encryptLib.encryptPassword(req.body.password);
 
-  const queryText = 'INSERT INTO person (username, password) VALUES ($1, $2) RETURNING id';
-  pool.query(queryText, [username, password])
+  const queryText = `INSERT INTO "organizations" ("name", "address", "city", "zipcode", "phone", "email", "website", "username", "password") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING id;`
+  pool.query(queryText, [name, address, city, zipcode, phone, email, website, username, password])
     .then(() => { res.sendStatus(201); })
     .catch((err) => { next(err); });
 });

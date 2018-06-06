@@ -9,12 +9,20 @@ const mapStateToProps = state => ({
   login: state.login,
 });
 
+
 class LoginPage extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      username: '',
+      name: '',
+      address: '',
+      city: '',
+      zip: '',
+      phone: '',
+      email: '',
+      website: '',
+      login: '',
       password: '',
     };
   }

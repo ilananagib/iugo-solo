@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import FormControl from '@material-ui/core/FormControl';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+
 
 class RegisterPage extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      name: '',
+      address: '',
+      city: '',
+      zipcode: '',
+      phone: '',
+      email: '',
+      website: '',
       username: '',
       password: '',
       message: '',
@@ -22,6 +33,13 @@ class RegisterPage extends Component {
       });
     } else {
       const body = {
+        name: this.state.name,
+        address: this.state.address,
+        city: this.state.city,
+        zipcode: this.state.zipcode,
+        phone: this.state.phone,
+        email: this.state.email,
+        website: this.state.website,
         username: this.state.username,
         password: this.state.password,
       };
@@ -72,26 +90,103 @@ class RegisterPage extends Component {
         <form onSubmit={this.registerUser}>
           <h1>Register User</h1>
           <div>
-            <label htmlFor="username">
-              Username:
-              <input
-                type="text"
-                name="username"
+            <FormControl>
+          <InputLabel htmlFor="name">
+              Organization:</InputLabel>
+              <Input
+                id="name"
+                value={this.state.name}
+                onChange={this.handleInputChangeFor('name')}
+              />
+            </FormControl>
+          </div>
+          <div>
+          <FormControl>
+            <InputLabel htmlFor="address">
+              Address:</InputLabel>
+              <Input
+                id="address"
+                value={this.state.address}
+                onChange={this.handleInputChangeFor('address')}
+              />
+           </FormControl>
+          </div>
+          <div>
+            <FormControl> 
+              <InputLabel htmlFor="city">
+              City:</InputLabel>
+              <Input
+                id="city"
+                value={this.state.city}
+                onChange={this.handleInputChangeFor('city')}
+              />
+            </FormControl>
+          </div>
+          <div>
+          <FormControl>
+          <InputLabel htmlFor="zipcode">
+              ZipCode:</InputLabel>
+              <Input
+                id="zipcode"
+                value={this.state.zipcode}
+                onChange={this.handleInputChangeFor('zipcode')}
+              />
+            </FormControl>
+          </div>
+          <div>
+          <FormControl>
+          <InputLabel htmlFor="phone">
+              Phone Number:</InputLabel>
+              <Input
+                id="phone"
+                value={this.state.phone}
+                onChange={this.handleInputChangeFor('phone')}
+              />
+             </FormControl>
+          </div>
+          <div>
+          <FormControl>
+          <InputLabel htmlFor="email">
+              E-mail:</InputLabel>
+              <Input
+                id="email"
+                value={this.state.email}
+                onChange={this.handleInputChangeFor('email')}
+              />
+             </FormControl>
+          </div>
+          <div>
+          <FormControl>
+          <InputLabel htmlFor="website">
+              Website:</InputLabel>
+              <Input
+                id="website"
+                value={this.state.website}
+                onChange={this.handleInputChangeFor('website')}
+              />
+            </FormControl>
+          </div>
+          <div>
+          <FormControl>
+            <InputLabel htmlFor="username">
+              Username:</InputLabel>
+              <Input
+                id="username"
                 value={this.state.username}
                 onChange={this.handleInputChangeFor('username')}
               />
-            </label>
+            </FormControl>
           </div>
           <div>
-            <label htmlFor="password">
-              Password:
-              <input
-                type="password"
-                name="password"
+          <FormControl>
+            <InputLabel htmlFor="password">
+              Password:</InputLabel>
+              <Input
+                id="password"
                 value={this.state.password}
                 onChange={this.handleInputChangeFor('password')}
               />
-            </label>
+              </FormControl>
           </div>
           <div>
             <input

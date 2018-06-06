@@ -25,8 +25,8 @@ function Header(props) {
           <Typography variant='title'>
             <img src='images/iugo-logo.png' className='logo' alt='iugo'/>
             </Typography>
-          <Button color="black">Login</Button>
-          <Button color="black">Sign Up</Button>
+          <Button color="primary">Login</Button>
+          <Button color="primary">Sign Up</Button>
         </Toolbar>
       </AppBar>
     </div>
