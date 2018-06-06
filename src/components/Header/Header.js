@@ -20,12 +20,13 @@ function Header(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static" title={<img src="iugo-logo.png" alt="iugo"/>}>
+      <AppBar color='white' position="static" title={<img src="iugo-logo.png" alt="iugo"/>}>
         <Toolbar>
           <Typography variant='title'>
             <img src='images/iugo-logo.png' className='logo' alt='iugo'/>
             </Typography>
           <Button color="black">Login</Button>
+          <Button color="black">Sign Up</Button>
         </Toolbar>
       </AppBar>
     </div>
