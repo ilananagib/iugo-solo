@@ -4,6 +4,9 @@ import axios from 'axios';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+
 
 
 class RegisterPage extends Component {
@@ -21,6 +24,7 @@ class RegisterPage extends Component {
       username: '',
       password: '',
       message: '',
+      categories: '',
     };
   }
 
@@ -42,6 +46,7 @@ class RegisterPage extends Component {
         website: this.state.website,
         username: this.state.username,
         password: this.state.password,
+        categories: this.state.categories,
       };
 
       // making the request to the server to post the new user's registration
@@ -84,6 +89,7 @@ class RegisterPage extends Component {
   }
 
   render() {
+    const { classes } = this.props;
     return (
       <div>
         {this.renderAlert()}
@@ -91,7 +97,7 @@ class RegisterPage extends Component {
           <h1>Register User</h1>
           <div>
             <FormControl>
-          <InputLabel htmlFor="name">
+              <InputLabel htmlFor="name">
               Organization:</InputLabel>
               <Input
                 id="name"
@@ -101,20 +107,20 @@ class RegisterPage extends Component {
             </FormControl>
           </div>
           <div>
-          <FormControl>
-            <InputLabel htmlFor="address">
-              Address:</InputLabel>
+            <FormControl>
+              <InputLabel htmlFor="address">
+                Address:</InputLabel>
               <Input
                 id="address"
                 value={this.state.address}
                 onChange={this.handleInputChangeFor('address')}
               />
-           </FormControl>
+            </FormControl>
           </div>
           <div>
-            <FormControl> 
+            <FormControl>
               <InputLabel htmlFor="city">
-              City:</InputLabel>
+                City:</InputLabel>
               <Input
                 id="city"
                 value={this.state.city}
@@ -123,9 +129,9 @@ class RegisterPage extends Component {
             </FormControl>
           </div>
           <div>
-          <FormControl>
-          <InputLabel htmlFor="zipcode">
-              ZipCode:</InputLabel>
+            <FormControl>
+              <InputLabel htmlFor="zipcode">
+                ZipCode:</InputLabel>
               <Input
                 id="zipcode"
                 value={this.state.zipcode}
@@ -134,31 +140,31 @@ class RegisterPage extends Component {
             </FormControl>
           </div>
           <div>
-          <FormControl>
-          <InputLabel htmlFor="phone">
-              Phone Number:</InputLabel>
+            <FormControl>
+              <InputLabel htmlFor="phone">
+                Phone Number:</InputLabel>
               <Input
                 id="phone"
                 value={this.state.phone}
                 onChange={this.handleInputChangeFor('phone')}
               />
-             </FormControl>
+            </FormControl>
           </div>
           <div>
-          <FormControl>
-          <InputLabel htmlFor="email">
-              E-mail:</InputLabel>
+            <FormControl>
+              <InputLabel htmlFor="email">
+                E-mail:</InputLabel>
               <Input
                 id="email"
                 value={this.state.email}
                 onChange={this.handleInputChangeFor('email')}
               />
-             </FormControl>
+            </FormControl>
           </div>
           <div>
-          <FormControl>
-          <InputLabel htmlFor="website">
-              Website:</InputLabel>
+            <FormControl>
+              <InputLabel htmlFor="website">
+                Website:</InputLabel>
               <Input
                 id="website"
                 value={this.state.website}
@@ -167,9 +173,33 @@ class RegisterPage extends Component {
             </FormControl>
           </div>
           <div>
-          <FormControl>
-            <InputLabel htmlFor="username">
-              Username:</InputLabel>
+            <FormControl >
+              <InputLabel htmlFor="categories">
+                Categories:</InputLabel>
+              <Select
+                value={this.state.categories}
+                onChange={this.handleInputChangeFor('categories')}
+                inputProps={{
+                  name: 'categories',
+                  id: 'categories',
+                }}
+              >
+                <MenuItem value="">
+                  <em>Categories</em>
+                </MenuItem>
+                <MenuItem value={1}>Healthcare</MenuItem>
+                <MenuItem value={2}>Support Groups</MenuItem>
+                <MenuItem value={3}>Housing/Shelter</MenuItem>
+                <MenuItem value={4}>Food Pantries</MenuItem>
+                <MenuItem value={5}>Education</MenuItem>
+                <MenuItem value={6}>Career Advancement</MenuItem>
+              </Select>
+            </FormControl>
+          </div>
+          <div>
+            <FormControl>
+              <InputLabel htmlFor="username">
+                Username:</InputLabel>
               <Input
                 id="username"
                 value={this.state.username}
@@ -178,15 +208,15 @@ class RegisterPage extends Component {
             </FormControl>
           </div>
           <div>
-          <FormControl>
-            <InputLabel htmlFor="password">
-              Password:</InputLabel>
+            <FormControl>
+              <InputLabel htmlFor="password">
+                Password:</InputLabel>
               <Input
                 id="password"
                 value={this.state.password}
                 onChange={this.handleInputChangeFor('password')}
               />
-              </FormControl>
+            </FormControl>
           </div>
           <div>
             <input

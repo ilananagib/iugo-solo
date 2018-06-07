@@ -27,9 +27,10 @@ router.post('/register', (req, res, next) => {
   const website = req.body.website;
   const username = req.body.username;
   const password = encryptLib.encryptPassword(req.body.password);
+  const categories = req.body.categories;
 
-  const queryText = `INSERT INTO "organizations" ("name", "address", "city", "zipcode", "phone", "email", "website", "username", "password") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING id;`
-  pool.query(queryText, [name, address, city, zipcode, phone, email, website, username, password])
+  const queryText = `INSERT INTO "organizations" ("name", "address", "city", "zipcode", "phone", "email", "website", "username", "password", "categories_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING id;`
+  pool.query(queryText, [name, address, city, zipcode, phone, email, website, username, password, categories])
     .then(() => { res.sendStatus(201); })
     .catch((err) => { next(err); });
 });

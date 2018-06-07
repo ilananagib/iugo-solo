@@ -24,6 +24,7 @@ class LoginPage extends Component {
       website: '',
       login: '',
       password: '',
+      categories: '',
     };
   }
 
