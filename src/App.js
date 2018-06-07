@@ -12,6 +12,10 @@ import RegisterPage from './components/RegisterPage/RegisterPage';
 import UserPage from './components/UserPage/UserPage';
 import InfoPage from './components/InfoPage/InfoPage';
 import SideNavBar from './components/SideNavBar/SideNavBar';
+import AboutPage from './components/AboutPage/AboutPage';
+import CategoriesPage from './components/Categories/Categories';
+import ContactPage from './components/ContactPage/ContactPage';
+
 
 import './styles/main.css';
 
@@ -38,6 +42,19 @@ const App = () => (
         <Route
           path="/info"
           component={InfoPage}
+        />
+         <Route
+          path="/about"
+          component={AboutPage}
+        />
+         <Route
+          path="/categories"
+          component={CategoriesPage}
+        />
+
+       <Route
+          path="/contact"
+          component={ContactPage}
         />
         {/* OTHERWISE (no path!) */}
         <Route render={() => <h1>404</h1>} />

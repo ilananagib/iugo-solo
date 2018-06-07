@@ -28,7 +28,7 @@ function SideNavBar(props) {
         <ListItem button component="a" href="/categories">
           <ListItemText primary="Categories" />
         </ListItem>
-        <ListItem button component="a" href="/contactus">
+        <ListItem button component="a" href="/contact">
           <ListItemText primary="Contact Us" />
         </ListItem>
       </List>
