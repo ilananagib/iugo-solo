@@ -8,9 +8,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 const styles = theme => ({
   root: {
-    width: '100%',
-    maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
+    maxWidth: 300,
+    margin: 70,
+    color: '#40D797',
   },
 });
 
