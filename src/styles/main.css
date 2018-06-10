@@ -1,21 +1,22 @@
-body {
+/* body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-
+} */
+/* 
 .instructions h1 {
     font-size: 24px;
     font-weight: 700;
-}
+} */
 
-.instructions {
+/* .instructions {
     background-color: #00acb0;
     padding: 5px;
     color: #ece7e7;
-}
+} */
 
 form {
-    width: 30%;
-    margin: 1% auto;
+    width: 100%;
+  
+    float: right;
 }
 
 input {
@@ -27,9 +28,9 @@ input[type="submit"] {
     margin: 10px;
 }
 
-.message {
+/* .message {
     padding: 10px 0;
-}
+} */
 
 .message p {
     margin-left: 10px;
@@ -43,34 +44,34 @@ input[type="submit"] {
     background-color: #f8f8f8;
 }
 
-.navbar {
+/* .navbar {
   background-color: white;
   width: 100%;
   border-radius: 0px;
-}
+} */
 
-ul {
+/* ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-}
+} */
 
-li {
+/* li {
     float: left;
-}
+} */
 
-li a {
+/* li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 
-}
+} */
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+/* li a:hover {
     text-decoration: underline;
     color: #eee;
-}
+} */

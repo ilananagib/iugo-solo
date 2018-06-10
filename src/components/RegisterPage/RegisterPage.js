@@ -89,7 +89,6 @@ class RegisterPage extends Component {
   }
 
   render() {
-    const { classes } = this.props;
     return (
       <div>
         {this.renderAlert()}
