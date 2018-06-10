@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 
 
-
 class CategoriesPage extends Component {
     constructor() {
         super();
@@ -17,37 +16,28 @@ class CategoriesPage extends Component {
     }
 
     getCategories = () => {
-        axios.get(`/api/categories`)
+        axios.get('/api/categories/${categories_id}')
         
             .then((response) => {
-                // console.log('get', response);
+                console.log('get', response);
                 this.setState({
                     categoriesList: response.data
                 })
             })
     
-    // axios({
-    //     method: 'GET',
-    //     url: '/api/categories',
-    //     data: 1,
-    // }).then((response) => {
-    //     this.setState({
-    //         categoriesList: response.data,
-    //     });
-    //     console.log(this.state.categoriesList);
-    // }).catch((error) => {
-    //     console.log('Error on GET', error);
-    // })
 }
 
 render() {
     return (
         <div>
             <h1>Categories</h1>
+            <div>
+    <button onClick={this.props.getCategories}></button>
+</div>
             <ul>
                 {this.state.categoriesList.map(categories => {
                     return (
-                        <li key={categories.id}>{`${categories.name} ${categories.address}`}</li>
+                        <li key={categories.id}>{`${categories.name} ${categories.address} ${categories.city} ${categories.zipcode} ${categories.phone} ${categories.email} ${categories.website}`}</li>
                     )
                 })}
             </ul>
