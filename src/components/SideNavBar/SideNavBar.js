@@ -17,7 +17,7 @@ const styles = theme => ({
 function SideNavBar(props) {
   const { classes } = props;
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={styles.paperLeft}>
       <List component="nav">
         <ListItem button component="a" href="/">
           <ListItemText primary="Home" />

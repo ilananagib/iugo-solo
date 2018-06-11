@@ -15,15 +15,18 @@ import SideNavBar from './components/SideNavBar/SideNavBar';
 import AboutPage from './components/AboutPage/AboutPage';
 import CategoriesPage from './components/CategoriesPage/CategoriesPage';
 import ContactPage from './components/ContactPage/ContactPage';
-
-
+import HealthcarePage from './components/HealthcarePage/HealthcarePage';
+import SupportPage from './components/SupportPage/SupportPage';
+import HousingPage from './components/HousingPage/HousingPage';
+import FoodPage from './components/FoodPage/FoodPage';
+import EducationPage from './components/EducationPage/EducationPage';
+import CareerPage from './components/CareerPage/CareerPage';
 import './styles/main.css';
 
 
 const App = () => (
   <div>
     <Header />
-    <SideNavBar/>
     <Router>
       <Switch>
         <Redirect exact from="/" to="/home" />
@@ -55,6 +58,30 @@ const App = () => (
        <Route
           path="/contact"
           component={ContactPage}
+        />
+         <Route
+          path="/healthcare"
+          component={HealthcarePage}
+        />
+         <Route
+          path="/support"
+          component={SupportPage}
+        />
+         <Route
+          path="/housing"
+          component={HousingPage}
+        />
+          <Route
+          path="/food"
+          component={FoodPage}
+        />
+           <Route
+          path="/education"
+          component={EducationPage}
+        />
+           <Route
+          path="/career"
+          component={CareerPage}
         />
         {/* OTHERWISE (no path!) */}
         <Route render={() => <h1>404</h1>} />

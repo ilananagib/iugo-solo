@@ -75,3 +75,16 @@ input[type="submit"] {
     text-decoration: underline;
     color: #eee;
 } */
+
+
+.mainView {
+    display: flex;
+}
+
+.sideBar {
+    flex: 2;
+}
+
+.mainContent {
+    flex: 5;
+}

@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import SideNavBar from '../SideNavBar/SideNavBar';
 
 
 const styles = {
@@ -22,8 +23,12 @@ const styles = {
 function ContactPage(props) {
     const { classes } = props;
     return (
-        <div>
-            <Card className={styles.card}>
+        <div className='mainView'>
+        <div className='sideBar'>
+         <SideNavBar />
+         </div>
+         <div className='mainContent'>
+            <Card>
                 <CardMedia
                     className={styles.media}
                     image="images/iugo-icon.png"
@@ -46,6 +51,7 @@ function ContactPage(props) {
                 </Button>
                 </CardActions>
             </Card>
+        </div>
         </div>
     );
 }
