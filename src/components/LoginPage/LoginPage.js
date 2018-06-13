@@ -72,10 +72,11 @@ class LoginPage extends Component {
 
   render() {
     return (
-      <div>
-        <div className='sideBar'>
+      <div className='mainView'>
+      <div className='sideBar'>
           <SideNavBar />
-        </div>
+      </div>
+      <div className='mainContent'>
         {this.renderAlert()}
         <form onSubmit={this.login}>
           <h1>Login</h1>
@@ -110,6 +111,7 @@ class LoginPage extends Component {
             <Link to="/register">Register</Link>
           </div>
         </form>
+      </div>
       </div>
     );
   }

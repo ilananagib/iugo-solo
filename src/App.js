@@ -11,7 +11,6 @@ import LoginPage from './components/LoginPage/LoginPage';
 import RegisterPage from './components/RegisterPage/RegisterPage';
 import UserPage from './components/UserPage/UserPage';
 import InfoPage from './components/InfoPage/InfoPage';
-import SideNavBar from './components/SideNavBar/SideNavBar';
 import AboutPage from './components/AboutPage/AboutPage';
 import CategoriesPage from './components/CategoriesPage/CategoriesPage';
 import ContactPage from './components/ContactPage/ContactPage';

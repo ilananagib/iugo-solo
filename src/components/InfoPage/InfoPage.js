@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Nav from '../../components/Nav/Nav';
+
 import { USER_ACTIONS } from '../../redux/actions/userActions';
+import FormPage from '../FormPage/FormPage';
+
 
 const mapStateToProps = state => ({
   user: state.user,
@@ -25,17 +27,21 @@ class InfoPage extends Component {
     if (this.props.user.userName) {
       content = (
         <div>
-          <p>
-            Info Page
-          </p>
+          
         </div>
       );
     }
 
     return (
+      <div className='mainView'>
+      <div className='sideBar'>
+          <FormPage />
+      </div>
+      <div className='mainContent'>
       <div>
-        <Nav />
         { content }
+      </div>
+      </div>
       </div>
     );
   }
