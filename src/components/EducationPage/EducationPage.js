@@ -26,9 +26,9 @@ class EducationPage extends Component {
 
         render(){
             return (
-                <div className='mainView'>
-                    <div className='sideBar'>
-                        <SideNavBar />
+                <div className=''>
+                    <div >
+                      
                     </div>
                     <div className='mainContent'>
                         <ul>

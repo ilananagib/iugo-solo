@@ -30,9 +30,9 @@ function CategoriesPage (props) {
 
     const { classes } = props;
     return (
-        <div className='mainView'>
-            <div className='sideBar'>
-                <SideNavBar />
+        <div >
+            <div >
+                
             </div>
             <div className='mainContent'>
 

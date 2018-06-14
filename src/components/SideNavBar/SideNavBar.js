@@ -12,8 +12,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 const styles = theme => ({
   root: {
-    maxWidth: 300,
-    margin: 70,
+    // maxWidth: 300,
+    // margin: 70,
     color: '#40D797',
   },
 });
@@ -29,7 +29,7 @@ function SideNavBar(props) {
   
   const { classes } = props;
   return (
-    <div className={classes.root} style={styles.paperLeft}>
+    <div className="navBar" >
       <List component="nav">
         <ListItem button component="a" href="/">
           <ListItemText primary="Home" />

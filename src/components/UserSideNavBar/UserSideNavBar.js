@@ -7,12 +7,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 
 const styles = theme => ({
-  root: {
-    maxWidth: 300,
-    margin: 70,
-    color: '#40D797',
-  },
-});
+  // root: {
+  //   maxWidth: 300,
+  //   margin: 70,
+  //   color: '#40D797',
+
+  }
+)
 
 function UserSideNavBar(props) {
   const { classes } = props;

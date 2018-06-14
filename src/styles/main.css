@@ -1,90 +1,31 @@
-/* body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-} */
-/* 
-.instructions h1 {
-    font-size: 24px;
-    font-weight: 700;
-} */
 
-/* .instructions {
-    background-color: #00acb0;
-    padding: 5px;
-    color: #ece7e7;
-} */
+.logo{
+    width: 200px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 
-form {
-    width: 100%;
-  
-    float: right;
+  .mainView {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 9fr;
+    height: 600px;
 }
 
-input {
-    margin: 5px;
-    margin-bottom: 10px;
+.navBar {
+    grid-column: 1/2;
+    grid-row: 2/5;
 }
 
-input[type="submit"] {
-    margin: 10px;
+.loginButton{
+    grid-column: 4/5;
+    grid-row: 1/2;
+    align-items: left;
+    background: purple;
 }
 
-/* .message {
-    padding: 10px 0;
-} */
-
-.message p {
-    margin-left: 10px;
-}
-
-.message:nth-child(odd) {
-     background-color: #eeeeee;
-}
-
-.message:nth-child(even) {
-    background-color: #f8f8f8;
-}
-
-/* .navbar {
-  background-color: white;
-  width: 100%;
-  border-radius: 0px;
-} */
-
-/* ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-} */
-
-/* li {
-    float: left;
-} */
-
-/* li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-
-} */
-
-/* Change the link color to #111 (black) on hover */
-/* li a:hover {
-    text-decoration: underline;
-    color: #eee;
-} */
-
-
-.mainView {
-    display: flex;
-}
-
-.sideBar {
-    flex: 2;
-}
-
-.mainContent {
-    flex: 5;
+.signButton{
+    grid-column: 4/5;
+    grid-row: 1/2;
+    align-items:right;
 }
