@@ -49,8 +49,8 @@ class UserPage extends Component {
     return (
       <div>
          <div className='mainView'>
-            <div className='sideBar'>
-                <UserSideNavBar />
+            <div >
+               
             </div>
             <div className='mainContent'>
         { content }

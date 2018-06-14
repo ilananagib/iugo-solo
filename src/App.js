@@ -21,11 +21,14 @@ import FoodPage from './components/FoodPage/FoodPage';
 import EducationPage from './components/EducationPage/EducationPage';
 import CareerPage from './components/CareerPage/CareerPage';
 import './styles/main.css';
+import SideNavBar from './components/SideNavBar/SideNavBar';
 
 
 const App = () => (
-  <div>
+  <div >
     <Header />
+    <SideNavBar />
+
     <Router>
       <Switch>
         <Redirect exact from="/" to="/home" />

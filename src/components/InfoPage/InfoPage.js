@@ -33,8 +33,8 @@ class InfoPage extends Component {
     }
 
     return (
-      <div className='mainView'>
-      <div className='sideBar'>
+      <div>
+      <div >
           <FormPage />
       </div>
       <div className='mainContent'>

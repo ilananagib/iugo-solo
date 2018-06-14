@@ -26,10 +26,8 @@ class CareerPage extends Component {
 
         render(){
             return (
-                <div className='mainView'>
-                    <div className='sideBar'>
-                        <SideNavBar />
-                    </div>
+                <div>
+                
                     <div className='mainContent'>
                         <ul>
                             {this.state.categoriesList.map(categories => {
