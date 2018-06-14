@@ -77,6 +77,8 @@ class LoginPage extends Component {
           <SideNavBar />
       </div>
       <div className='mainContent'>
+      </div>
+      <div>
         {this.renderAlert()}
         <form onSubmit={this.login}>
           <h1>Login</h1>
