@@ -24,7 +24,7 @@ import './styles/main.css';
 
 
 const App = () => (
-  <div>
+  <div className='mainView'>
     <Header />
     <Router>
       <Switch>

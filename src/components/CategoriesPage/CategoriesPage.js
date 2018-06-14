@@ -5,20 +5,29 @@ import PropTypes from 'prop-types';
 import SideNavBar from '../SideNavBar/SideNavBar';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-
 import CardMedia from '@material-ui/core/CardMedia';
-
 import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
 
 
+
 const styles = {
     card: {
+        
         width: 150,
+        display: 'inline-block',
+        flexDirection: 'column',
+        float: 'left',
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: '10px',
+        padding: '5px',
     },
     media: {
+        width: '100%',
         height: 0,
         paddingTop: '100%', // 16:9
+        display: 'flex',
     },
 }
 
@@ -34,10 +43,10 @@ function CategoriesPage (props) {
             <div className='sideBar'>
                 <SideNavBar />
             </div>
-            <div className='mainContent'>
+            <div className='mainContent' >
 
                 <Card className={classes.card}>
-                    <CardMedia
+                    <CardMedia 
                         className={classes.media}
                         image="images/healthcare.png"
                         title="Healthcare" />
@@ -49,7 +58,7 @@ function CategoriesPage (props) {
                 </Card>
 
                 <Card className={classes.card}>
-                    <CardMedia
+                    <CardMedia 
                         className={classes.media}
                         image="images/support.png"
                         title="Support" />
@@ -61,7 +70,7 @@ function CategoriesPage (props) {
                 </Card>
 
                 <Card className={classes.card}>
-                    <CardMedia
+                    <CardMedia 
                         className={classes.media}
                         image="images/housing.png"
                         title="Housing" />
@@ -73,7 +82,7 @@ function CategoriesPage (props) {
                 </Card>
 
                 <Card className={classes.card}>
-                    <CardMedia
+                    <CardMedia 
                         className={classes.media}
                         image="images/food.png"
                         title="Food Pantries" />
@@ -98,7 +107,7 @@ function CategoriesPage (props) {
                 </Card>
 
                 <Card className={classes.card}>
-                    <CardMedia
+                    <CardMedia 
                         className={classes.media}
                         image="images/career.png"
                         title="Career" />

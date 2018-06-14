@@ -11,7 +11,9 @@ class AboutPage extends Component{
              <SideNavBar />
              </div>
             <div className='mainContent'>
+          
             About Page is connected!
+    
             </div>
             </div>
         );
