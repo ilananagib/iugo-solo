@@ -8,21 +8,28 @@ import Button from '@material-ui/core/Button';
 
 const styles = {
   menuButton: {
-    marginLeft: 650,
+    marginLeft: 850,
     marginRight: 20,
   },
 };
 
 function Header(props) {
   const { classes } = props;
+
+  const handleLogin = (pageLink) => () => {
+    props.history.push(pageLink);
+}
+
+
+
   return (
     <div >
       <Toolbar>
         <Typography variant='title'>
-          <img src='images/iugo-logo.png' className='logo' alt='iugo' />
+          <img src='images/iugo-logo.png' onClick={handleLogin('/home')} className='logo' alt='iugo' />
         </Typography>
-        <Button style={{ backgroundColor: '#40D797' }} className={classes.menuButton}>Login</Button>
-        <Button style={{ backgroundColor: '#40D797' }}>Sign Up</Button>
+        <Button onClick={handleLogin('/home')} style={{ backgroundColor: '#40D797' }} className={classes.menuButton}>Login</Button>
+        <Button onClick={handleLogin('/register')} style={{ backgroundColor: '#40D797' }}>Sign Up</Button>
       </Toolbar>
     </div>
   );

@@ -21,12 +21,14 @@ import FoodPage from './components/FoodPage/FoodPage';
 import EducationPage from './components/EducationPage/EducationPage';
 import CareerPage from './components/CareerPage/CareerPage';
 import './styles/main.css';
+import SideNavBar from './components/SideNavBar/SideNavBar';
 
 
 const App = () => (
   <div>
-    <Header />
     <Router>
+      <div>
+    
       <Switch>
         <Redirect exact from="/" to="/home" />
         <Route
@@ -86,6 +88,7 @@ const App = () => (
         <Route render={() => <h1>404</h1>} />
 
       </Switch>
+      </div>
     </Router>
   </div>
 );

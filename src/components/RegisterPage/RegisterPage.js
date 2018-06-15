@@ -6,6 +6,7 @@ import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
+import Header from '../Header/Header';
 import SideNavBar from '../SideNavBar/SideNavBar';
 
 
@@ -92,6 +93,9 @@ class RegisterPage extends Component {
   render() {
     return (
       <div className='mainView'>
+        <div className='header'>
+          <Header history={this.props.history} />
+        </div>
         <div className='sideBar'>
           <SideNavBar />
         </div>

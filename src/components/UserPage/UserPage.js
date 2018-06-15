@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import { USER_ACTIONS } from '../../redux/actions/userActions';
 import { triggerLogout } from '../../redux/actions/loginActions';
+import Header from '../Header/Header';
+import SideNavBar from '../SideNavBar/SideNavBar';
 import UserSideNavBar from '../UserSideNavBar/UserSideNavBar';
 
 
@@ -35,7 +36,7 @@ class UserPage extends Component {
           <h1
             id="welcome"
           >
-            Welcome, { this.props.user.userName }!
+            Welcome, {this.props.user.userName}!
           </h1>
           <button
             onClick={this.logout}
@@ -47,16 +48,17 @@ class UserPage extends Component {
     }
 
     return (
-      <div>
-         <div className='mainView'>
-            <div className='sideBar'>
-                <UserSideNavBar />
-            </div>
-            <div className='mainContent'>
-        { content }
+      <div className='mainView'>
+      <div className='header'>
+          <Header history={this.props.history} />
       </div>
+      <div className='sideBar'>
+          <SideNavBar />
       </div>
-      </div>
+      <div className='mainContent'>
+            {content}
+          </div>
+        </div>
     );
   }
 }

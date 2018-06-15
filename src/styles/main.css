@@ -1,17 +1,3 @@
-/* body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-} */
-/* 
-.instructions h1 {
-    font-size: 24px;
-    font-weight: 700;
-} */
-
-/* .instructions {
-    background-color: #00acb0;
-    padding: 5px;
-    color: #ece7e7;
-} */
 
 form {
     width: 100%;
@@ -28,9 +14,7 @@ input[type="submit"] {
     margin: 10px;
 }
 
-/* .message {
-    padding: 10px 0;
-} */
+
 
 .message p {
     margin-left: 10px;
@@ -44,47 +28,26 @@ input[type="submit"] {
     background-color: #f8f8f8;
 }
 
-/* .navbar {
-  background-color: white;
-  width: 100%;
-  border-radius: 0px;
-} */
-
-/* ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-} */
-
-/* li {
-    float: left;
-} */
-
-/* li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-
-} */
-
-/* Change the link color to #111 (black) on hover */
-/* li a:hover {
-    text-decoration: underline;
-    color: #eee;
-} */
+.logo {
+    width: 13em;
+}
 
 
 .mainView {
     display: flex;
+    flex-wrap: wrap;
+  
 }
 
 .sideBar {
-    flex: 2;
+    display: flex 1;
+    flex: 30%;
+ 
 }
 
 .mainContent {
-    flex: 5;
+    display: flex 2;
+    flex: 70%;
+    float: left;
+  
 }

@@ -13,7 +13,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 const styles = theme => ({
   root: {
     maxWidth: 300,
-    margin: 70,
+    margin: 80,
     color: '#40D797',
   },
 });

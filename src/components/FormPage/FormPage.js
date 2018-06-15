@@ -8,6 +8,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Button from '@material-ui/core/Button';
+import Header from '../Header/Header';
 import SideNavBar from '../SideNavBar/SideNavBar';
 import UserSideNavBar from '../UserSideNavBar/UserSideNavBar';
 import swal from 'sweetalert';
@@ -75,44 +76,45 @@ class FormPage extends Component {
 
     render() {
         return (
-            <div>
-                <div className='mainView'>
-                    <div className='sideBar'>
-                        <SideNavBar />
-                    </div>
-                    <div className='mainContent'>
-                        <Table>
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>Organization Name</TableCell>
-                                    <TableCell>Address</TableCell>
-                                    <TableCell>City</TableCell>
-                                    <TableCell numeric>Zipcode</TableCell>
-                                    <TableCell numeric>Phone</TableCell>
-                                    <TableCell>Email</TableCell>
-                                    <TableCell>Website</TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {this.state.formTable.map(form => {
-                                    return (
-                                        <TableRow key={form.id}>
-                                            <TableCell numeric>{form.name}</TableCell>
-                                            <TableCell numeric>{form.address}</TableCell>
-                                            <TableCell numeric>{form.city}</TableCell>
-                                            <TableCell>{form.zipcode}</TableCell>
-                                            <TableCell>{form.phone}</TableCell>
-                                            <TableCell>{form.email}</TableCell>
-                                            <TableCell>{form.website}</TableCell>
-                                            <TableCell>
-                                                <Button onClick={() => this.deleteForm(form.id)}>Delete Account</Button>
-                                            </TableCell>
-                                        </TableRow>
-                                    );
-                                })}
-                            </TableBody>
-                        </Table>
-                    </div>
+            <div className='mainView'>
+                <div className='header'>
+                    <Header history={this.props.history} />
+                </div>
+                <div className='sideBar'>
+                    <SideNavBar />
+                </div>
+                <div className='mainContent'>
+                    <Table>
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>Organization Name</TableCell>
+                                <TableCell>Address</TableCell>
+                                <TableCell>City</TableCell>
+                                <TableCell numeric>Zipcode</TableCell>
+                                <TableCell numeric>Phone</TableCell>
+                                <TableCell>Email</TableCell>
+                                <TableCell>Website</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {this.state.formTable.map(form => {
+                                return (
+                                    <TableRow key={form.id}>
+                                        <TableCell numeric>{form.name}</TableCell>
+                                        <TableCell numeric>{form.address}</TableCell>
+                                        <TableCell numeric>{form.city}</TableCell>
+                                        <TableCell>{form.zipcode}</TableCell>
+                                        <TableCell>{form.phone}</TableCell>
+                                        <TableCell>{form.email}</TableCell>
+                                        <TableCell>{form.website}</TableCell>
+                                        <TableCell>
+                                            <Button onClick={() => this.deleteForm(form.id)}>Delete Account</Button>
+                                        </TableCell>
+                                    </TableRow>
+                                );
+                            })}
+                        </TableBody>
+                    </Table>
                 </div>
             </div>
         );

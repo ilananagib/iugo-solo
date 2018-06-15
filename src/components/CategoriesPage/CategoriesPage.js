@@ -1,36 +1,42 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import PropTypes from 'prop-types';
+import Header from '../Header/Header';
 import SideNavBar from '../SideNavBar/SideNavBar';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-
 import CardMedia from '@material-ui/core/CardMedia';
-
 import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
 
 
 const styles = {
     card: {
-        width: 150,
+        display: 'flex',
+        float: 'left',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        width: 200,
     },
     media: {
-        height: 0,
-        paddingTop: '100%', // 16:9
+        display: 'flex',
+        paddingTop: '100%',
     },
 }
 
-function CategoriesPage (props) {
-    
+function CategoriesPage(props) {
+    const { classes } = props;
+
     const handleClick = (pageLink) => () => {
         props.history.push(pageLink);
     }
 
-    const { classes } = props;
+
     return (
         <div className='mainView'>
+            <div className='header'>
+                <Header history={props.history} />
+            </div>
             <div className='sideBar'>
                 <SideNavBar />
             </div>
@@ -108,7 +114,6 @@ function CategoriesPage (props) {
             </Button>
                     </CardActions>
                 </Card>
-
 
             </div>
         </div>
