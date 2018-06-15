@@ -36,18 +36,18 @@ input[type="submit"] {
 .mainView {
     display: flex;
     flex-wrap: wrap;
-  
 }
 
 .sideBar {
     display: flex 1;
     flex: 30%;
- 
 }
 
 .mainContent {
     display: flex 2;
-    flex: 70%;
+    flex: 60%;
     float: left;
-  
+    border: solid #ed3093 1px;
+    height: 500px;
+   margin-right: 100px;
 }
