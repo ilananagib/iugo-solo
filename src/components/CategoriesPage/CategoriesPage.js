@@ -14,14 +14,14 @@ const styles = {
     card: {
         display: 'flex',
         float: 'left',
-        flexDirection: 'column',
+        flexDirection: 'column 1',
         justifyContent: 'center',
         alignItems: 'center',
-        width: 150,
-        height: 300,
-        marginLeft: 20,
-        marginTop: 50,
-
+        width: 300,
+        height: 110,
+        marginTop: 40,
+        marginRight: 50,
+        marginLeft: 120,
     },
     media: {
         display: 'flex',
@@ -86,7 +86,7 @@ function CategoriesPage(props) {
                         title="Housing" />
                     <CardActions>
                         <Button onClick={handleClick('/housing')} size="small" color="primary">
-                            Housing and Shelter
+                            Housing
             </Button>
                     </CardActions>
                 </Card>
