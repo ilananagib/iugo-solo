@@ -38,6 +38,8 @@ input[type="submit"] {
     flex: 30%;
 }
 
+ /* Main Border */
+
 .mainContent {
     display: flex 2;
     flex: 60%;
@@ -50,41 +52,6 @@ input[type="submit"] {
     position: relative;
     width: 50%;
 }
-
-.contactLogo {
-  opacity: 1;
-  display: block;
-  width: 70%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
-}
-
-.container:hover .image {
-  opacity: 0.3;
-}
-
-.container:hover .middle {
-  opacity: 1;
-}
-
-.text {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-}
-
 
  /* About Page */
 
@@ -125,3 +92,17 @@ input[type="submit"] {
     transform: translate(-40%, -40%);
     -ms-transform: translate(-40%, -40%);
   }
+
+   /* Contact Page */
+
+   .contactContainer {
+    margin-left: 280px;
+    margin-top: 100px;
+    width: 500px;
+   }
+   .contactLogo{
+    width: 130px;
+    margin-left: 150px;
+   }
+
+

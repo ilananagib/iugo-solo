@@ -18,13 +18,11 @@ class ContactPage extends Component {
                     <SideNavBar />
                 </div>
                 <div className='mainContent'>
-                    <div className='container'>
-                        <img src='images/iugo-icon.png' className='contactLogo' width='120' />
-                        <div className='middle'>
-                            <div className='text'>
-                                Iugo is here to connect you with ressources available in your community. For any questions, please send us an e-mail. We will contact you shortly.
-                            </div>
-                        </div>
+                    <div className='contactContainer'>
+                        <img src='images/iugo-icon.png' className='contactLogo' />
+                        <p>Iugo is here to connect you with ressources available in your community.</p>
+                        <p> For any questions, please send us an e-mail. We will contact you shortly.</p>
+                        <p>iugo@iugo.com</p>
                     </div>
                 </div>
             </div>
