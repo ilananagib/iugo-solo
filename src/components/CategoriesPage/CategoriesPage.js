@@ -16,12 +16,25 @@ const styles = {
         float: 'left',
         flexDirection: 'column',
         justifyContent: 'center',
-        width: 200,
+        alignItems: 'center',
+        width: 150,
+        height: 300,
+        marginLeft: 20,
+        marginTop: 50,
+
     },
     media: {
         display: 'flex',
-        paddingTop: '100%',
+        width: 90,
+        height: 90,
+        // paddingTop: '100%',
+        alignItems: 'center',
     },
+
+    button: {
+        alignItems: 'center',
+
+    }
 }
 
 function CategoriesPage(props) {
@@ -48,7 +61,7 @@ function CategoriesPage(props) {
                         image="images/healthcare.png"
                         title="Healthcare" />
                     <CardActions>
-                        <Button onClick={handleClick('/healthcare')} size="small" color="primary">
+                        <Button onClick={handleClick('/healthcare')} className={classes.button} size="small" color="primary">
                             Healthcare
             </Button>
                     </CardActions>

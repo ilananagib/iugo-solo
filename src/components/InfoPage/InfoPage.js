@@ -27,23 +27,18 @@ class InfoPage extends Component {
     if (this.props.user.userName) {
       content = (
         <div>
-
+          <FormPage />
         </div>
       );
     }
 
     return (
-      <div className='mainView'>
-        <div className='header'>
-          <Header history={this.props.history} />
-        </div>
-        <div className='sideBar'>
-          <SideNavBar />
-        </div>
+    
         <div className='mainContent'>
+
           {content}
         </div>
-      </div>
+   
     );
   }
 }

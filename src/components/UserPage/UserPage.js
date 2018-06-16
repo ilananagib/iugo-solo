@@ -53,7 +53,7 @@ class UserPage extends Component {
           <Header history={this.props.history} />
       </div>
       <div className='sideBar'>
-          <SideNavBar />
+          <UserSideNavBar />
       </div>
       <div className='mainContent'>
             {content}

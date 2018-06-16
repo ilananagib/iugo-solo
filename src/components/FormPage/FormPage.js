@@ -29,6 +29,7 @@ class FormPage extends Component {
     }
 
     getOrgInfo = (id) => {
+        console.log('id', id)
         axios.get(`/api/organizations/${id}`)
 
             .then((response) => {

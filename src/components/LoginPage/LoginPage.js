@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { triggerLogin, formError, clearError } from '../../redux/actions/loginActions';
 import Header from '../Header/Header';
 import SideNavBar from '../SideNavBar/SideNavBar';
+import Carousel from '../Carousel/Carousel';
 
 
 const mapStateToProps = state => ({
@@ -81,6 +82,7 @@ class LoginPage extends Component {
           <SideNavBar />
       </div>
       <div className='mainContent'>
+      <Carousel />
             {this.renderAlert()}
             <form onSubmit={this.login}>
               <h1>Login</h1>

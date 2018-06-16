@@ -1,9 +1,4 @@
 
-form {
-    width: 100%;
-  
-    float: right;
-}
 
 input {
     margin: 5px;
@@ -49,5 +44,84 @@ input[type="submit"] {
     float: left;
     border: solid #ed3093 1px;
     height: 500px;
-   margin-right: 100px;
+    margin-right: 130px;
 }
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.contactLogo {
+  opacity: 1;
+  display: block;
+  width: 70%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+ /* About Page */
+
+.aboutContainer {
+    position: relative;
+    width: 50%;
+  }
+  
+  .aboutImage {
+    display: block;
+    width: 1000px;
+    height:500px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #40d797;
+  }
+  
+  .aboutContainer:hover .overlay {
+    opacity: 1;
+  }
+  
+  .aboutText {
+    color: black;
+    font-size: 21px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-40%, -40%);
+    -ms-transform: translate(-40%, -40%);
+  }
