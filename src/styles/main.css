@@ -2,7 +2,7 @@
 
 input {
     margin: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 input[type="submit"] {
@@ -54,7 +54,29 @@ input[type="submit"] {
     position: relative;
     width: 50%;
 }
+ /* Login Page */
+.loginBox {
+    position: absolute;
+    top: 350px;
+    right: 250px;
+    width: 250px;
+    background-color: #40d797 ;
+    padding: 40px;
+    margin-bottom: 200px;
+    border-radius: 25px;
+}
 
+.loginContainer {
+    display: flex;
+    position: relative;
+ 
+}
+
+.mainImage {
+    display: block;
+    width: 1000px;
+    height:500px;
+}
  /* About Page */
 
 .aboutContainer {

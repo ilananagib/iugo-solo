@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { triggerLogin, formError, clearError } from '../../redux/actions/loginActions';
 import Header from '../Header/Header';
 import SideNavBar from '../SideNavBar/SideNavBar';
-import Carousel from '../Carousel/Carousel';
+
 
 
 const mapStateToProps = state => ({
@@ -75,14 +75,17 @@ class LoginPage extends Component {
   render() {
     return (
       <div className='mainView'>
-      <div className='header'>
+        <div className='header'>
           <Header history={this.props.history} />
-      </div>
-      <div className='sideBar'>
+        </div>
+        <div className='sideBar'>
           <SideNavBar />
-      </div>
-      <div className='mainContent'>
-      <Carousel />
+        </div>
+        <div className='mainContent'>
+        <div className='loginContainer'>
+            <img src='images/world.jpg' alt='main' className='mainImage' />
+            </div>
+          <div className='loginBox'>
             {this.renderAlert()}
             <form onSubmit={this.login}>
               <h1>Login</h1>
@@ -115,10 +118,11 @@ class LoginPage extends Component {
                   value="Log In"
                 />
                 <Link to="/register">Register</Link>
-              </div>
+                </div>
             </form>
           </div>
         </div>
+      </div>
     );
   }
 }
