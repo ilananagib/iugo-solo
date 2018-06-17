@@ -32,7 +32,7 @@ class UserPage extends Component {
 
     if (this.props.user.userName) {
       content = (
-        <div>
+        <div className='userWelcome'>
           <h1
             id="welcome"
           >
@@ -56,6 +56,9 @@ class UserPage extends Component {
           <UserSideNavBar />
       </div>
       <div className='mainContent'>
+      <div className='userContainer'>
+            <img src='images/world.jpg' alt='main' className='mainImage' />
+            </div>
             {content}
           </div>
         </div>

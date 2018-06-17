@@ -46,7 +46,7 @@ input[type="submit"] {
     display: flex 2;
     flex: 60%;
     float: left;
-    border: solid #ed3093 1px;
+    border: solid #ed3093 2px;
     height: 500px;
     margin-right: 130px;
 }
@@ -130,3 +130,15 @@ input[type="submit"] {
    }
 
 
+/* Contact Page */
+
+.userWelcome {
+    position: absolute;
+    top: 350px;
+    right: 250px;
+    width: 250px;
+    background-color: #40d797 ;
+    padding: 40px;
+    margin-bottom: 200px;
+    border-radius: 25px;
+}
