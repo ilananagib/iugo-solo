@@ -9,6 +9,8 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import Header from '../Header/Header';
 import SideNavBar from '../SideNavBar/SideNavBar';
+import Grid from '@material-ui/core/Grid';
+
 
 
 class RegisterPage extends Component {
@@ -103,21 +105,21 @@ class RegisterPage extends Component {
           <div>
             {this.renderAlert()}
             <form onSubmit={this.registerUser}>
-              <h1>Register User</h1>
-              <div className='form'>
+              <h1 className='registerH1'>Thank you for joining iugo.</h1>
+              <div className='formMain' >
                 <div>
-                  <FormControl>
-                    <InputLabel  rows="4" htmlFor="name">
+                  <FormControl className='form'>
+                    <InputLabel htmlFor="name">
                       Organization:</InputLabel>
                     <Input
                       id="name"
                       value={this.state.name}
                       onChange={this.handleInputChangeFor('name')}
                     />
-                  </FormControl>
+                  </FormControl >
                 </div>
                 <div>
-                  <FormControl>
+                  <FormControl className='form'>
                     <InputLabel htmlFor="address">
                       Address:</InputLabel>
                     <Input
@@ -128,7 +130,7 @@ class RegisterPage extends Component {
                   </FormControl>
                 </div>
                 <div>
-                  <FormControl>
+                  <FormControl className='form'>
                     <InputLabel htmlFor="city">
                       City:</InputLabel>
                     <Input
@@ -139,7 +141,7 @@ class RegisterPage extends Component {
                   </FormControl>
                 </div>
                 <div>
-                  <FormControl>
+                  <FormControl className='form'>
                     <InputLabel htmlFor="zipcode">
                       ZipCode:</InputLabel>
                     <Input
@@ -150,7 +152,7 @@ class RegisterPage extends Component {
                   </FormControl>
                 </div>
                 <div>
-                  <FormControl>
+                  <FormControl className='form'>
                     <InputLabel htmlFor="phone">
                       Phone Number:</InputLabel>
                     <Input
@@ -161,7 +163,7 @@ class RegisterPage extends Component {
                   </FormControl>
                 </div>
                 <div>
-                  <FormControl>
+                  <FormControl className='form'>
                     <InputLabel htmlFor="email">
                       E-mail:</InputLabel>
                     <Input
@@ -172,7 +174,7 @@ class RegisterPage extends Component {
                   </FormControl>
                 </div>
                 <div>
-                  <FormControl>
+                  <FormControl className='form'>
                     <InputLabel htmlFor="website">
                       Website:</InputLabel>
                     <Input
@@ -183,7 +185,7 @@ class RegisterPage extends Component {
                   </FormControl>
                 </div>
                 <div>
-                  <FormControl >
+                  <FormControl className='formRight'>
                     <InputLabel htmlFor="categories">
                       Categories:</InputLabel>
                     <Select
@@ -207,7 +209,7 @@ class RegisterPage extends Component {
                   </FormControl>
                 </div>
                 <div>
-                  <FormControl>
+                  <FormControl className='formRight'>
                     <InputLabel htmlFor="username">
                       Username:</InputLabel>
                     <Input
@@ -218,7 +220,7 @@ class RegisterPage extends Component {
                   </FormControl>
                 </div>
                 <div>
-                  <FormControl>
+                  <FormControl className='formRight'>
                     <InputLabel htmlFor="password">
                       Password:</InputLabel>
                     <Input
@@ -226,10 +228,10 @@ class RegisterPage extends Component {
                       value={this.state.password}
                       onChange={this.handleInputChangeFor('password')}
                     />
-                  </FormControl>
+                  </FormControl >
                 </div>
-                <div>
-                  <input
+                <div className='formRight'>
+                  <input className='registerButton'
                     type="submit"
                     name="submit"
                     value="Register"

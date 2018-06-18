@@ -86,8 +86,8 @@ class FormPage extends Component {
                 </div>
                 <div className='mainContent'>
                     <Table>
-                        <TableHead>
-                            <TableRow>
+                        <TableHead >
+                            <TableRow >
                                 <TableCell>Organization Name</TableCell>
                                 <TableCell>Address</TableCell>
                                 <TableCell>City</TableCell>

@@ -4,6 +4,8 @@ import Header from '../Header/Header';
 import SideNavBar from '../SideNavBar/SideNavBar';
 
 
+
+
 class CareerPage extends Component {
     constructor(props) {
         super(props);
@@ -11,6 +13,7 @@ class CareerPage extends Component {
             categoriesList: [],
         }
     }
+    
 
     componentDidMount = () => {
         axios.get('/api/categories/6')
@@ -38,14 +41,12 @@ class CareerPage extends Component {
                     <ul>
                         {this.state.categoriesList.map(categories => {
                             return (
-                                <li key={categories.id}>
-                                {`${categories.name}
-                                ${categories.address}
-                                ${categories.city}
-                                ${categories.zipcode} 
-                                ${categories.phone} 
-                                ${categories.email} 
-                                ${categories.website}`}</li>
+                                <p className='categoriesResults' key={categories.id}>
+                                <h2>{categories.name}</h2>
+                                <p><strong>Address:</strong> {categories.address} - {categories.city} - {categories.zipcode}</p>
+                                <p><strong>Website:</strong> {categories.website}</p>
+                                <p><strong>E-mail:</strong> {categories.email}</p> 
+                                <p><strong>Phone Number:</strong> {categories.phone}</p></p>
                             )
                         })}
                     </ul>

@@ -37,10 +37,14 @@ class HealthcarePage extends Component {
             <div className='mainContent'>
                         <ul>
                             {this.state.categoriesList.map(categories => {
-                                return (
-                                    <li key={categories.id}><p>
-                                    {`${categories.name} ${categories.address} ${categories.city} ${categories.zipcode} ${categories.phone} ${categories.email} ${categories.website}`}</p></li>
-                                )
+                               return (
+                                <p className='categoriesResults' key={categories.id}>
+                                <h2>{categories.name}</h2>
+                                <p><strong>Address:</strong> {categories.address} - {categories.city} - {categories.zipcode}</p>
+                                <p><strong>Website:</strong> {categories.website}</p>
+                                <p><strong>E-mail:</strong> {categories.email}</p> 
+                                <p><strong>Phone Number:</strong> {categories.phone}</p></p>
+                            )
                             })}
                         </ul>
                     </div>
